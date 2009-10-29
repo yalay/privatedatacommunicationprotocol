@@ -59,7 +59,7 @@ public class Decrypter {
     String pad = "";
     if ((webSafe.length() % 4) == 2) {
       pad = "==";
-    } else if ((webSafe.length() % 4) == 1) {
+    } else if ((webSafe.length() % 4) == 3) {
       pad = "=";
     }
     return webSafe.replace('-', '+').replace('_', '/') + pad;
